@@ -8,10 +8,10 @@ sbalert -t "何をしますか？" -a "クエストに行く" -o "ショップ�
 #ショップの戻り値は2
 #プロフィールの戻り値は0
 case $? in
-  1 ) quest.sh
+  1 ) ./quest.sh
     ;;
-  2 ) shop.sh
+  2 ) ./shop.sh
     ;;
-  0 ) profile.sh
+  0 ) ./profile.sh
     ;;
 esac

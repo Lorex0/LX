@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 cd /var/mobile/Library/Preferences
-if [ test -e /var/mobile/Library/Preferences/LXgame/name.lx ]
+if [ test -e /var/mobile/Library/Preferences/LXgame/name.lx ]; then
   ./gamestart.sh
 else
   echo -e "ようこそ_LX-RPG_へ"
