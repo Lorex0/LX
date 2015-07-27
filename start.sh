@@ -1,20 +1,24 @@
 #!/bin/bash
 clear
-cd /var/mobile/Library/Preferences
-if [ test -e /var/mobile/Library/Preferences/LXgame/name.lx ]; then
+cd /var/mobile/Library/Preferences/Shell
+if [ -e /var/mobile/Library/Preferences/Shell/name.lx ]; then
   ./gamestart.sh
 else
-  echo -e "ようこそ_LX-RPG_へ"
-  mkdir LXgame
-  cd LXgame
+  echo "                     ようこそShell-gameへ
+--------------------------------------------------------------"
   sleep 2
   sbalert -t "名前を入力してください" -p > name.lx
+name=`cat name.lx`
+  echo -e -n "あなたの名前は\t"
+  echo -e "$nameです"
   echo -e -n "あなたの所持金は\t"
-  echo -e -n "500" > money.lx
-  echo -e "Gです"
+  echo -n "500" > money.lx
+  echo -n "500"
+  echo "Gです"
   echo -e -n "あなたのレベルは\tLv."
-  echo -e -n "1" > level.lx
-  echo -e "です"
+  echo -n "1" > level.lx
+  echo -n "1"
+  echo "です"
   cp level.lx exp.lx
   sleep 2
   ./gamestart.sh

@@ -1,6 +1,7 @@
 #!/bin/bash
+. ./config.sh
 clear
-cd /var/mobile/Library/Preferences/KRgame/
+cd /var/mobile/Library/Preferences/Shell/
 echo -e "$nameさん、お帰りなさい"
 sleep 2
 sbalert -t "何をしますか？" -a "クエストに行く" -o "ショップに行く" -d "プロフィールを見る"
